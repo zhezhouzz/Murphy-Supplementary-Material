@@ -4,12 +4,11 @@ let op_pool = [| "theta_stream" |]
 
 let libs = [| "Physicistsq"; "Nat" |]
 
-(* let i_err = ([ 2 ], 2, [ 2; 3 ], 3, [ 6; 5; 4 ]) *)
 let i_err = ([ 2 ], 1, [ 2 ], 2, [ 6; 5 ])
 
 let sampling_rounds = 5
 
-let p_size = 4
+let m = 4
 
 let pre (w : Physicistsq.t) (lenf : nat) (f : Physicistsq.t) (lenr : nat)
     (r : Physicistsq.t) =

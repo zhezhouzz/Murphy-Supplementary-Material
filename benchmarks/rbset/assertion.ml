@@ -14,15 +14,9 @@ let i_err =
         LNode (true, 3, LNodeS (false, 2), LNodeS (false, 4)),
         LNodeS (false, 6) ) )
 
-(* let i_err = *)
-(*   ( false, *)
-(*     1, *)
-(*     LNodeS (false, 0), *)
-(*     LNode (true, 5, LNodeS (false, 3), LNodeS (false, 6)) ) *)
-
 let sampling_rounds = 6
 
-let p_size = 4
+let m = 4
 
 let pre (label : bool) (x : int) (tree1 : Rbset.t) (tree2 : Rbset.t) (u : int) =
   is_rb_alt tree1 && is_rb_alt tree2 && rb_balance2 tree1 tree2

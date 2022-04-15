@@ -9,7 +9,7 @@ let i_err = (0, Node (3, Node (2, NodeS 1, Leaf), Node (5, NodeS 4, NodeS 6)))
 
 let sampling_rounds = 6
 
-let p_size = 4
+let m = 4
 
 let pre (x : int) (s : Unbset.t) = strict_sort s
 

@@ -10,7 +10,7 @@ let i_err =
 
 let sampling_rounds = 6
 
-let p_size = 4
+let m = 4
 
 let pre (h1 : Leftisthp.t) (h2 : Leftisthp.t) =
   leftist h1 && leftist h2 && strict_sort h1 && strict_sort h2

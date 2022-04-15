@@ -7,11 +7,10 @@ let libs = [| "Skewhp" |]
 let i_err =
   ( SkCons (SkNode (1, 0, [ 1 ], SkNodeS (0, 2, [])), SkNil),
     SkCons (SkNode (1, 5, [ 6 ], SkNodeS (0, 7, [])), SkNil) )
-(* (SkNodeS (0, 0), SkNodeS (0, 2)) *)
 
 let sampling_rounds = 6
 
-let p_size = 4
+let m = 4
 
 let pre (ts1 : Skewhp.t) (ts2 : Skewhp.t) = skewhp ts1 && skewhp ts2
 

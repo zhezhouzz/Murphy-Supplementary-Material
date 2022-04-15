@@ -10,11 +10,9 @@ let i_err =
     3,
     Node (0, NodeS 0, Node (1, Node (0, NodeS 0, NodeS 1), NodeS 1)) )
 
-(* let i_err = (0, [ 0 ], 2, Node (1, Node (0, NodeS 0, NodeS 1), NodeS 1)) *)
-
 let sampling_rounds = 6
 
-let p_size = 4
+let m = 4
 
 let pre (default : int) (i : Trie.tp) (a : int) (m : Trie.t) =
   (not (mem m a)) && children_diff m && less_len i m

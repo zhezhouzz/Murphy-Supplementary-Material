@@ -10,7 +10,7 @@ let i_err =
 
 let sampling_rounds = 6
 
-let p_size = 4
+let m = 4
 
 let pre (ts1 : Pairinghp.t) (ts2 : Pairinghp.t) =
   pairinghp ts1 && pairinghp ts2 && pairinghp_sort ts1 && pairinghp_sort ts2

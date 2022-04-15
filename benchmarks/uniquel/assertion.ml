@@ -6,12 +6,9 @@ let libs = [| "Uniquel" |]
 
 let i_err = (0, [ 1; 2; 3; 4 ])
 
-(* let i_err = (2, [ 1; 2 ]) *)
-(* let i_err = (1, [ 2; 3 ]) *)
-
 let sampling_rounds = 6
 
-let p_size = 4
+let m = 4
 
 let pre (x : int) (l1 : Uniquel.t) (l2 : Uniquel.t) (u : int) =
   implies (mem l1 u) (x < u || u == x) && uniq l1
