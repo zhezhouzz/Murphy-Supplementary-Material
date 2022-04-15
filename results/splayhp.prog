@@ -1,0 +1,20 @@
+let i_err = (15, Node (8, Node (6, Node (3, NodeS 1, NodeS 4), NodeS 7), Node (13, Node (11, NodeS 10, NodeS 12), NodeS 14)))
+Pre
+let spec (i_0:int) (it_0:int tree)  = true
+Perturbation
+IN: (x0: int, x1: int tree) {
+(x2: int tree) = tree_append_to_right_most(x0: int, x1: int tree);
+(x3: int tree) = tree_node(x0: int, x1: int tree, x2: int tree);
+(x4: int) = tree_upper_bound(x3: int tree);
+(x5: int) = plus1(x4: int)}
+OUT: (x5: int, x2: int tree)
+
+Default
+IN: (x0: int, x1: int tree) {
+(x2: int tree) = tree_append_to_left_most(x0: int, x1: int tree);
+(x3: int) = tree_min(x2: int tree);
+(x4: int tree) = tree_append_to_right_most(x3: int, x2: int tree);
+(x5: int) = tree_upper_bound(x4: int tree)}
+OUT: (x5: int, x1: int tree)
+
+

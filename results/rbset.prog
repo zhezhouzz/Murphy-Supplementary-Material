@@ -1,0 +1,20 @@
+let i_err = (false, 1, LNodeS (false, 0), LNode (true, 5, LNode (true, 3, LNodeS (false, 2), LNodeS (false, 4)), LNodeS (false, 6)))
+Pre
+let spec (b_0:bool) (i_0:int) (itb_0:int treeb) (itb_1:int treeb)  = true
+Perturbation
+IN: (x0: bool, x1: int, x2: int treeb, x3: int treeb) {
+(x4: int) = treeb_lower_bound(x2: int treeb);
+(x5: int treeb) = treeb_append_to_right_most(x0: bool, x4: int, x2: int treeb);
+(x6: int treeb) = treeb_rotation_left(x5: int treeb);
+(x7: int treeb) = treeb_drop_bottom(x6: int treeb)}
+OUT: (x0: bool, x1: int, x7: int treeb, x3: int treeb)
+
+Default
+IN: (x0: bool, x1: int, x2: int treeb, x3: int treeb) {
+(x4: int treeb) = treeb_append_to_left_most(x0: bool, x1: int, x2: int treeb);
+(x5: int treeb) = treeb_node(x0: bool, x1: int, x3: int treeb, x4: int treeb);
+(x6: int) = treeb_lower_bound(x5: int treeb);
+(x7: int treeb) = treeb_single(x0: bool, x6: int)}
+OUT: (x0: bool, x1: int, x7: int treeb, x3: int treeb)
+
+

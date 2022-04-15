@@ -1,0 +1,20 @@
+let i_err = (SkCons (SkNode (1, 0, [1], SkCons (SkNode (0, 2, [], SkNil), SkNil)), SkNil), SkCons (SkNode (1, 5, [6], SkCons (SkNode (0, 7, [], SkNil), SkNil)), SkNil))
+Pre
+let spec (skewhp_0:skewhp) (skewhp_1:skewhp)  = true
+Perturbation
+IN: (x0: skewhp, x1: skewhp) {
+(x2: int) = skewhp_lower_bound(x0: skewhp);
+(x3: int) = skewhp_lower_bound(x1: skewhp);
+(x4: skewhp) = skewhp_single(x3: int);
+(x5: skewhp) = skewhp_single(x2: int)}
+OUT: (x4: skewhp, x5: skewhp)
+
+Default
+IN: (x0: skewhp, x1: skewhp) {
+(x2: int) = skewhp_lower_bound(x1: skewhp);
+(x3: skewt, x4: skewhp) = skewhp_list_destruct(x1: skewhp);
+(x5: skewt) = skewt_head_update(x3: skewt, x2: int);
+(x6: skewhp) = skewhp_list_cons(x5: skewt, x4: skewhp)}
+OUT: (x6: skewhp, x0: skewhp)
+
+

@@ -1,0 +1,20 @@
+let i_err = (BiCons (BiNode (1, 0, BiCons (BiNode (0, 2, BiNil), BiNil)), BiNil), BiCons (BiNode (1, 4, BiCons (BiNode (0, 5, BiNil), BiNil)), BiNil))
+Pre
+let spec (binomialhp_0:binomialhp) (binomialhp_1:binomialhp)  = true
+Perturbation
+IN: (x0: binomialhp, x1: binomialhp) {
+(x2: int) = binomialhp_lower_bound(x0: binomialhp);
+(x3: binomialhp) = binomialhp_head_update(x0: binomialhp, x2: int);
+(x4: binomialhp) = binomialhp_head_update(x3: binomialhp, x2: int);
+(x5: binomialhp) = binomialhp_head_update(x1: binomialhp, x2: int)}
+OUT: (x5: binomialhp, x4: binomialhp)
+
+Default
+IN: (x0: binomialhp, x1: binomialhp) {
+(x2: int) = binomialhp_lower_bound(x0: binomialhp);
+(x3: binomialhp) = binomialhp_head_update(x0: binomialhp, x2: int);
+(x4: binomialhp) = binomialhp_head_update(x3: binomialhp, x2: int);
+(x5: int) = minus1(x2: int)}
+OUT: (x1: binomialhp, x4: binomialhp)
+
+

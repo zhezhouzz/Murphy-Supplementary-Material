@@ -1,0 +1,20 @@
+let i_err = (LNodeS (1, 0), LNode (3, 5, LNode (2, 3, LNodeS (1, 2), LNodeS (1, 4)), LNodeS (1, 6)))
+Pre
+let spec (iti_0:int treei) (iti_1:int treei)  = true
+Perturbation
+IN: (x0: int treei, x1: int treei) {
+(x2: int, x3: int) = treei_upper_bound(x0: int treei);
+(x4: int treei) = treei_append_to_right_most(x2: int, x3: int, x0: int treei);
+(x5: int treei) = treei_flip(x4: int treei);
+(x6: int treei) = treei_flip(x5: int treei)}
+OUT: (x1: int treei, x6: int treei)
+
+Default
+IN: (x0: int treei, x1: int treei) {
+(x2: int, x3: int) = treei_upper_bound(x1: int treei);
+(x4: int, x5: int, x6: int treei, x7: int treei) = treei_destruct(x0: int treei);
+(x8: int treei) = treei_append_to_right_most(x2: int, x5: int, x7: int treei);
+(x9: int treei) = treei_append_to_right_most(x4: int, x3: int, x6: int treei)}
+OUT: (x9: int treei, x8: int treei)
+
+

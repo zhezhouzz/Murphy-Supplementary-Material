@@ -1,0 +1,20 @@
+let i_err = (1, [1], 0, [], 4)
+Pre
+let spec (i_0:int) (il_0:int list) (i_1:int) (il_1:int list) (i_2:int)  = true
+Perturbation
+IN: (x0: int, x1: int list, x2: int, x3: int list, x4: int) {
+(x5: int) = const1();
+(x6: int list) = append(x1: int list, x0: int);
+(x7: int list) = append(x6: int list, x5: int);
+(x8: int list) = cons(x2: int, x7: int list)}
+OUT: (x4: int, x8: int list, x2: int, x3: int list, x2: int)
+
+Default
+IN: (x0: int, x1: int list, x2: int, x3: int list, x4: int) {
+(x5: int) = minus1(x4: int);
+(x6: int) = min(x1: int list);
+(x7: int list) = append(x3: int list, x5: int);
+(x8: int list, x9: int list) = list_mid_partition(x7: int list)}
+OUT: (x0: int, x9: int list, x2: int, x8: int list, x6: int)
+
+
